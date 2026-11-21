@@ -1,0 +1,30 @@
+[
+  {
+    "id": "fact-termination",
+    "type": "factual",
+    "query": "What is the notice period required to terminate the agreement?",
+    "expectedKeywords": ["days", "notice", "terminate"],
+    "expectGrounded": true
+  },
+  {
+    "id": "exact-clause-ref",
+    "type": "exact_identifier",
+    "query": "What does Section 14.2 say about liability caps?",
+    "expectedKeywords": ["liability", "cap"],
+    "expectGrounded": true
+  },
+  {
+    "id": "cache-paraphrase",
+    "type": "cache_test",
+    "query": "How many days in advance must I give notice to cancel the agreement?",
+    "expectedKeywords": ["days", "notice"],
+    "expectGrounded": true
+  },
+  {
+    "id": "unanswerable-out-of-doc",
+    "type": "unanswerable",
+    "query": "What is the CEO's favorite pizza topping?",
+    "expectedKeywords": [],
+    "expectGrounded": false
+  }
+]

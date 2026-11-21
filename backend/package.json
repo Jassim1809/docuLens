@@ -1,0 +1,31 @@
+{
+  "name": "docuLens-backend",
+  "version": "1.0.0",
+  "description": "Standalone Multi-PDF RAG backend using Gemini API, PostgreSQL + pgvector, LangChain.js, Hybrid Search (Dense + Postgres FTS + RRF), Reranking, Semantic Caching, and Evaluation.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "init:db": "node scripts/initDb.js",
+    "eval": "node evals/runEvals.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@langchain/core": "^1.4.2",
+    "@langchain/google-genai": "^2.3.6",
+    "@langchain/textsplitters": "^1.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "multer": "^2.5.0",
+    "pdf-parse": "^1.1.1",
+    "pg": "^8.13.1",
+    "pgvector": "^0.2.1",
+    "zod": "^3.24.1"
+  }
+}
